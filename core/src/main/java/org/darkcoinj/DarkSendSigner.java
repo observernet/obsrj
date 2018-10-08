@@ -1,10 +1,11 @@
 package org.darkcoinj;
 
 import com.google.common.base.Charsets;
-import org.pivxj.core.*;
-import org.pivxj.crypto.KeyCrypterException;
-import org.pivxj.script.Script;
-import org.pivxj.script.ScriptBuilder;
+import org.obsrj.core.*;
+
+import org.obsrj.crypto.KeyCrypterException;
+import org.obsrj.script.Script;
+import org.obsrj.script.ScriptBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.util.encoders.Base64;

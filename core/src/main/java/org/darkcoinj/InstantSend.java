@@ -1,15 +1,16 @@
 package org.darkcoinj;
 
 import com.google.common.collect.Lists;
-import org.pivxj.core.*;
-import org.pivxj.utils.Threading;
+import org.obsrj.core.*;
+
+import org.obsrj.utils.Threading;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.concurrent.locks.ReentrantLock;
 
-import static org.pivxj.core.DarkCoinSystem.fMasterNode;
+import static org.obsrj.core.DarkCoinSystem.fMasterNode;
 
 /**
  * Created by Eric on 2/8/2015.
@@ -387,7 +388,7 @@ public class InstantSend {
 
             TransactionLock newLock = new TransactionLock(
                     blockHeight,
-                    (int)Utils.currentTimeSeconds()+(60*60), //locks expire after 15 minutes (6 confirmations)
+                    (int) Utils.currentTimeSeconds()+(60*60), //locks expire after 15 minutes (6 confirmations)
                     (int)Utils.currentTimeSeconds()+(60*5),
                     tx.getHash());
             mapTxLocks.put(tx.getHash(), newLock);

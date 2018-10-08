@@ -14,9 +14,9 @@
 
 package wallettemplate;
 
-import org.pivxj.core.listeners.DownloadProgressTracker;
-import org.pivxj.core.Coin;
-import org.pivxj.utils.MonetaryFormat;
+import org.obsrj.core.listeners.DownloadProgressTracker;
+import org.obsrj.core.Coin;
+import org.obsrj.utils.MonetaryFormat;
 import com.subgraph.orchid.TorClient;
 import com.subgraph.orchid.TorInitializationListener;
 import javafx.animation.FadeTransition;

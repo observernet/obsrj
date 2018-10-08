@@ -16,12 +16,14 @@ package wallettemplate;
 
 import com.google.common.util.concurrent.*;
 import javafx.scene.input.*;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.kits.WalletAppKit;
-import org.pivxj.params.*;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.utils.Threading;
-import org.pivxj.wallet.DeterministicSeed;
+import org.obsrj.core.NetworkParameters;
+import org.obsrj.kits.WalletAppKit;
+import org.obsrj.params.MainNetParams;
+import org.obsrj.params.RegTestParams;
+import org.obsrj.params.TestNet3Params;
+import org.obsrj.utils.BriefLogFormatter;
+import org.obsrj.utils.Threading;
+import org.obsrj.wallet.DeterministicSeed;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -98,7 +100,7 @@ public class Main extends Application {
 
         // Make log output concise.
         BriefLogFormatter.init();
-        // Tell pivxj to run event handlers on the JavaFX UI thread. This keeps things simple and means
+        // Tell  to run event handlers on the JavaFX UI thread. This keeps things simple and means
         // we cannot forget to switch threads when adding event handlers. Unfortunately, the DownloadListener
         // we give to the app kit is currently an exception and runs on a library thread. It'll get fixed in
         // a future version.
