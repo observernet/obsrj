@@ -71,6 +71,7 @@ public class Block extends Message {
      * Includes an accumulator on the block.
      */
     public static final long ZEROCOIN_BLOCK_VERSION = 4;
+    public static final long ZEROCOIN_BIP_65_VERSION = 5;
 
     public static final boolean ACTIVATE_ZEROCOIN = true;
 
@@ -527,7 +528,7 @@ public class Block extends Message {
         if (!ACTIVATE_ZEROCOIN) {
             return false;
         }else {
-            return version == ZEROCOIN_BLOCK_VERSION;
+            return version >= ZEROCOIN_BLOCK_VERSION;
         }
     }
 
@@ -542,7 +543,7 @@ public class Block extends Message {
         if (!ACTIVATE_ZEROCOIN) {
             return Block.HEADER_SIZE;
         }else {
-            return Block.ZEROCOIN_BLOCK_VERSION == version ? ZEROCOIN_HEADER_SIZE : HEADER_SIZE;
+            return version >= Block.ZEROCOIN_BLOCK_VERSION  ? ZEROCOIN_HEADER_SIZE : HEADER_SIZE;
         }
     }
 
